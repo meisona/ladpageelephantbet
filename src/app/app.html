@@ -1,0 +1,261 @@
+<!-- ===== FAIXA LEGAL ===== -->
+<div class="border-b border-line bg-ink-900 text-[11px] uppercase tracking-[0.14em] text-slate-400">
+  <div class="mx-auto flex max-w-7xl items-center justify-between gap-4 px-4 py-2 sm:px-6">
+    <p class="flex items-center gap-3">
+      <span class="rounded-sm border border-slate-500 px-1 font-bold text-slate-200">18+</span>
+      <span class="hidden sm:inline">Licença ISJ Angola</span>
+      <span class="hidden text-slate-600 sm:inline">/</span>
+      <span>Joga com responsabilidade</span>
+    </p>
+    <p class="hidden md:block">Site de parceiro afiliado</p>
+  </div>
+</div>
+
+<!-- ===== CABEÇALHO ===== -->
+<header class="sticky top-0 z-50 border-b border-line bg-ink-950/85 backdrop-blur-md">
+  <nav class="mx-auto flex h-16 max-w-7xl items-center justify-between gap-6 px-4 sm:px-6" aria-label="Navegação principal">
+    <a href="#inicio" class="flex items-baseline gap-2" aria-label="Início">
+      <span class="font-display text-2xl font-extrabold italic uppercase leading-none tracking-tight text-white">
+        Elephant<span class="text-pink-500">Bet</span>
+      </span>
+      <span class="hidden rounded-sm bg-ink-800 px-1.5 py-0.5 text-[10px] font-semibold uppercase tracking-wider text-slate-400 sm:inline">Parceiro</span>
+    </a>
+
+    <div class="flex items-center gap-2">
+      <a [href]="cfg.affiliateUrl" target="_blank" rel="sponsored nofollow noopener"
+         class="hidden h-9 items-center rounded-md border border-ink-600 px-4 text-sm font-semibold text-slate-200 transition hover:border-slate-400 sm:inline-flex">
+        Entrar
+      </a>
+      <a [href]="cfg.affiliateUrl" target="_blank" rel="sponsored nofollow noopener"
+         class="inline-flex h-9 items-center rounded-md bg-pink-500 px-4 text-sm font-bold text-white transition hover:bg-pink-600">
+        Registar
+      </a>
+    </div>
+  </nav>
+</header>
+
+<main>
+  <!-- ===== HERO ===== -->
+  <section id="inicio" class="relative overflow-hidden border-b border-line">
+    <div class="bg-grid pointer-events-none absolute inset-0" aria-hidden="true"></div>
+    <div class="pointer-events-none absolute inset-y-0 right-0 hidden w-1/2 bg-[radial-gradient(ellipse_at_70%_30%,rgb(61_107_255/0.16),transparent_60%)] lg:block" aria-hidden="true"></div>
+
+    <div class="relative mx-auto grid max-w-7xl gap-12 px-4 pb-16 pt-12 sm:px-6 lg:grid-cols-12 lg:gap-10 lg:pb-24 lg:pt-20">
+      <!-- Texto -->
+      <div class="lg:col-span-7 lg:pt-6">
+        <p class="flex items-center gap-3 text-xs font-semibold uppercase tracking-[0.2em] text-pink-500">
+          <span class="h-px w-8 bg-pink-500"></span> Registo Elephant Bet · Angola
+        </p>
+
+        <h1 class="mt-6 font-display text-[3.4rem] font-extrabold uppercase italic leading-[0.88] tracking-tight text-white sm:text-7xl xl:text-[6.25rem]">
+          Aposta no Girabola,<br />
+          na Champions<br />
+          <span class="text-pink-500">e no Aviator.</span>
+        </h1>
+
+        <p class="mt-7 max-w-lg text-base leading-relaxed text-slate-400 sm:text-lg">
+          Cria a tua conta Elephant Bet em menos de dois minutos e começa a apostar em Kwanzas.
+        </p>
+
+        <div class="mt-9 flex flex-wrap items-center gap-x-6 gap-y-4">
+          <a [href]="cfg.affiliateUrl" target="_blank" rel="sponsored nofollow noopener"
+             class="group inline-flex h-14 items-center gap-3 rounded-md bg-pink-500 pl-7 pr-5 text-base font-bold uppercase tracking-wide text-white shadow-[0_10px_30px_-10px_rgb(255_26_117/0.7)] transition hover:bg-pink-600">
+            Criar conta
+            <app-icon name="arrow" [size]="20" [stroke]="2.25" class="transition group-hover:translate-x-1" />
+          </a>
+          <a href="#registo" class="text-sm font-semibold text-slate-300 underline decoration-slate-600 underline-offset-[6px] transition hover:text-white hover:decoration-white">
+            Ver como funciona
+          </a>
+        </div>
+
+        @if (cfg.promoCode) {
+          <div class="mt-6 inline-flex items-center gap-4 rounded-md border border-dashed border-amber-400/50 py-2 pl-4 pr-2">
+            <span class="text-xs uppercase tracking-wider text-slate-400">Código</span>
+            <strong class="font-mono text-base text-amber-400">{{ cfg.promoCode }}</strong>
+            <button type="button" (click)="copyCode()" class="rounded bg-ink-800 px-3 py-1.5 text-xs font-semibold hover:bg-ink-700">
+              {{ copied() ? 'Copiado' : 'Copiar' }}
+            </button>
+          </div>
+        }
+
+        <ul class="mt-12 grid max-w-xl grid-cols-3 divide-x divide-line border-t border-line pt-6 text-sm">
+          <li class="pr-4">
+            <p class="font-display text-2xl font-bold text-white">ISJ</p>
+            <p class="text-slate-500">Operador licenciado</p>
+          </li>
+          <li class="px-4">
+            <p class="font-display text-2xl font-bold text-white">AOA</p>
+            <p class="text-slate-500">Pagamentos em Kwanzas</p>
+          </li>
+          <li class="pl-4">
+            <p class="font-display text-2xl font-bold text-white">2 min</p>
+            <p class="text-slate-500">Para criar conta</p>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Widget de apostas (demonstração) -->
+      <div class="lg:col-span-5">
+        <div class="overflow-hidden rounded-xl border border-line bg-ink-900 shadow-[0_30px_80px_-30px_rgb(0_0_0/0.8)]">
+          <div class="flex items-center gap-1 overflow-x-auto border-b border-line px-3 pt-3 text-sm" role="presentation">
+            @for (t of sportsTabs; track t; let first = $first) {
+              <span class="whitespace-nowrap border-b-2 px-3 pb-2.5 font-semibold"
+                    [class]="first ? 'border-pink-500 text-white' : 'border-transparent text-slate-500'">{{ t }}</span>
+            }
+          </div>
+
+          <ul class="divide-y divide-line">
+            @for (m of matches; track m.home; let mi = $index) {
+              <li class="px-4 py-3.5">
+                <div class="mb-2.5 flex items-center justify-between text-[11px] font-medium uppercase tracking-wider">
+                  <span class="text-slate-500">{{ m.league }}</span>
+                  @if (m.live) {
+                    <span class="flex items-center gap-1.5 text-red-400"><span class="live-dot h-1.5 w-1.5 rounded-full bg-red-500"></span>Ao vivo {{ m.status }}</span>
+                  } @else {
+                    <span class="text-slate-500">{{ m.status }}</span>
+                  }
+                </div>
+                <div class="flex items-center gap-3">
+                  <div class="min-w-0 flex-1 space-y-1.5 text-sm">
+                    <p class="flex items-center gap-2">
+                      <span class="h-3.5 w-1 rounded-full" [style.background]="m.homeColor"></span>
+                      <span class="truncate font-medium text-slate-100">{{ m.home }}</span>
+                      @if (m.score) { <span class="ml-auto font-bold text-white">{{ m.score[0] }}</span> }
+                    </p>
+                    <p class="flex items-center gap-2">
+                      <span class="h-3.5 w-1 rounded-full" [style.background]="m.awayColor"></span>
+                      <span class="truncate font-medium text-slate-100">{{ m.away }}</span>
+                      @if (m.score) { <span class="ml-auto font-bold text-white">{{ m.score[1] }}</span> }
+                    </p>
+                  </div>
+                  <div class="grid grid-cols-3 gap-1.5">
+                    @for (o of m.odds; track $index; let oi = $index) {
+                      <button type="button" (click)="selectOdd(mi, oi)"
+                              [attr.aria-pressed]="isPicked(mi, oi)"
+                              [attr.aria-label]="m.home + ' contra ' + m.away + ', opção ' + ['1','X','2'][oi] + ', odd ' + o"
+                              class="flex h-11 w-[3.4rem] flex-col items-center justify-center rounded-md text-[13px] font-bold transition"
+                              [class]="isPicked(mi, oi) ? 'bg-pink-500 text-white' : 'bg-ink-800 text-slate-100 hover:bg-ink-700'">
+                        <span class="text-[10px] font-medium leading-none opacity-60">{{ ['1', 'X', '2'][oi] }}</span>
+                        <span class="mt-1 leading-none">{{ o }}</span>
+                      </button>
+                    }
+                  </div>
+                </div>
+              </li>
+            }
+          </ul>
+
+          <!-- Boletim -->
+          <div class="border-t border-line bg-ink-850 p-4">
+            <div class="flex items-center justify-between text-xs uppercase tracking-wider text-slate-500">
+              <span>Boletim · Simples</span><span>1 seleção</span>
+            </div>
+            <div class="mt-3 flex items-end justify-between gap-4">
+              <div class="min-w-0">
+                <p class="truncate text-sm font-semibold text-white">{{ pickedLabel() }}</p>
+                <p class="truncate text-xs text-slate-500">{{ pickedMatch().home }} × {{ pickedMatch().away }}</p>
+              </div>
+              <span class="rounded bg-ink-700 px-2 py-1 text-sm font-bold text-lime-400">{{ pickedOdd() }}</span>
+            </div>
+            <dl class="mt-3 grid grid-cols-2 gap-2 text-sm">
+              <div class="rounded-md bg-ink-800 px-3 py-2"><dt class="text-[11px] text-slate-500">Aposta</dt><dd class="font-semibold">1.000 Kz</dd></div>
+              <div class="rounded-md bg-ink-800 px-3 py-2"><dt class="text-[11px] text-slate-500">Ganho possível</dt><dd class="font-semibold text-lime-400">{{ payout() }} Kz</dd></div>
+            </dl>
+            <a [href]="cfg.affiliateUrl" target="_blank" rel="sponsored nofollow noopener"
+               class="mt-3 flex h-11 items-center justify-center rounded-md bg-pink-500 text-sm font-bold uppercase tracking-wide text-white transition hover:bg-pink-600">
+              Criar conta para apostar
+            </a>
+          </div>
+        </div>
+        <p class="mt-3 text-right text-[11px] text-slate-600">Demonstração. Odds ilustrativas, não são ofertas reais.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== TICKER ===== -->
+  <div class="overflow-hidden border-b border-line bg-ink-900 py-3" aria-hidden="true">
+    <div class="marquee flex w-max items-center gap-10 whitespace-nowrap text-sm text-slate-400">
+      @for (_ of [0, 1]; track $index) {
+        @for (t of ticker; track t) {
+          <span class="flex items-center gap-10">{{ t }}<span class="h-1.5 w-1.5 rotate-45 bg-pink-500"></span></span>
+        }
+      }
+    </div>
+  </div>
+
+  <!-- ===== REGISTO (3 passos) ===== -->
+  <section id="registo" class="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:py-24">
+    <div class="flex flex-col gap-8 lg:flex-row lg:items-end lg:justify-between">
+      <h2 class="font-display text-4xl font-extrabold uppercase italic leading-[0.9] text-white md:text-6xl">Regista-te<br />em 3 passos</h2>
+      <a [href]="cfg.affiliateUrl" target="_blank" rel="sponsored nofollow noopener"
+         class="group inline-flex h-14 items-center gap-3 self-start rounded-md bg-pink-500 pl-7 pr-5 font-bold uppercase tracking-wide text-white transition hover:bg-pink-600 lg:self-auto">
+        Começar registo
+        <app-icon name="arrow" [stroke]="2.25" class="transition group-hover:translate-x-1" />
+      </a>
+    </div>
+    <ol class="mt-10 grid gap-px overflow-hidden rounded-xl border border-line bg-line md:grid-cols-3">
+      @for (s of steps; track s.title; let i = $index) {
+        <li class="bg-ink-900 p-7">
+          <span class="font-display text-4xl font-bold text-pink-500">0{{ i + 1 }}</span>
+          <h3 class="mt-3 text-lg font-semibold text-white">{{ s.title }}</h3>
+          <p class="mt-1.5 text-sm leading-relaxed text-slate-400">{{ s.text }}</p>
+        </li>
+      }
+    </ol>
+  </section>
+
+  <!-- ===== FAQ ===== -->
+  <section id="faq" class="border-t border-line">
+    <div class="mx-auto grid max-w-7xl gap-10 px-4 py-16 sm:px-6 lg:grid-cols-12 lg:py-24">
+      <h2 class="font-display text-4xl font-extrabold uppercase italic leading-[0.9] text-white md:text-5xl lg:col-span-4">Perguntas<br />frequentes</h2>
+      <div class="lg:col-span-8">
+        @for (f of faqs; track f.q; let first = $first) {
+          <details class="border-b border-line" [open]="first">
+            <summary class="flex cursor-pointer items-center justify-between gap-6 py-6 text-lg font-semibold text-white transition hover:text-pink-500">
+              <h3>{{ f.q }}</h3>
+              <span class="faq-icon text-slate-500 transition-transform"><app-icon name="plus" [size]="22" /></span>
+            </summary>
+            <p class="-mt-1 max-w-2xl pb-6 leading-relaxed text-slate-400">{{ f.a }}</p>
+          </details>
+        }
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CTA FINAL ===== -->
+  <section class="bg-pink-500 text-ink-950">
+    <div class="mx-auto flex max-w-7xl flex-col items-start justify-between gap-8 px-4 py-16 sm:px-6 md:flex-row md:items-center lg:py-20">
+      <h2 class="font-display text-5xl font-extrabold uppercase italic leading-[0.88] md:text-7xl">O jogo começa<br />com uma conta.</h2>
+      <a [href]="cfg.affiliateUrl" target="_blank" rel="sponsored nofollow noopener"
+         class="group inline-flex h-16 shrink-0 items-center gap-3 rounded-md bg-ink-950 pl-8 pr-6 text-lg font-bold uppercase tracking-wide text-white transition hover:bg-ink-800">
+        Criar conta agora
+        <app-icon name="arrow" [size]="22" [stroke]="2.25" class="transition group-hover:translate-x-1" />
+      </a>
+    </div>
+  </section>
+</main>
+
+<!-- ===== RODAPÉ ===== -->
+<footer class="bg-ink-950 text-sm text-slate-400">
+  <div class="mx-auto max-w-7xl px-4 py-10 sm:px-6">
+    <p class="font-display text-2xl font-extrabold italic uppercase text-white">Elephant<span class="text-pink-500">Bet</span> <span class="text-sm not-italic text-slate-500">· Parceiro</span></p>
+  </div>
+  <div class="border-t border-line">
+    <div class="mx-auto flex max-w-7xl flex-col gap-4 px-4 py-6 text-xs text-slate-500 sm:px-6 md:flex-row md:items-center md:justify-between">
+      <p class="flex items-center gap-3">
+        <span class="grid h-8 w-8 shrink-0 place-items-center rounded-full border-2 border-red-500 text-[11px] font-black text-red-400">18+</span>
+        A Elephant Bet Angola é licenciada e regulada pelo Instituto de Supervisão de Jogos de Angola.
+      </p>
+      <p>© {{ year }} {{ cfg.siteName }}</p>
+    </div>
+  </div>
+</footer>
+
+<!-- Barra fixa no telemóvel -->
+<div class="fixed inset-x-0 bottom-0 z-40 border-t border-line bg-ink-950/95 p-3 backdrop-blur md:hidden">
+  <a [href]="cfg.affiliateUrl" target="_blank" rel="sponsored nofollow noopener"
+     class="flex h-12 items-center justify-center gap-2 rounded-md bg-pink-500 font-bold uppercase tracking-wide text-white">
+    Criar conta <app-icon name="arrow" [size]="18" [stroke]="2.25" />
+  </a>
+</div>
+<div class="h-20 md:hidden" aria-hidden="true"></div>

@@ -28,6 +28,6 @@ pnpm build          # gera dist/elephant-afiliado/browser
    - Framework preset: **None**
    - Build command: `pnpm build`
    - Build output directory: `dist/elephant-afiliado/browser`
-4. Nome do projecto: `ladpageelephantbet` → a página fica em `https://ladpageelephantbet.pages.dev`.
+4. Nome do projecto: `landingelephant` → a página fica em `https://landingelephant.pages.dev`.
 
 Cada `git push` para `main` publica automaticamente uma nova versão.

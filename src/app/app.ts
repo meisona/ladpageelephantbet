@@ -45,48 +45,69 @@ export class App {
 
   protected readonly matches: Match[] = [
     {
-      league: 'Girabola',
-      home: 'Petro de Luanda', away: '1º de Agosto',
-      homeTag: 'PET', awayTag: 'AGO', homeColor: '#f4c20d', awayColor: '#d62828',
+      league: 'Premier League',
+      home: 'Manchester City', away: 'Arsenal',
+      homeTag: 'MCI', awayTag: 'ARS', homeColor: '#6cabdd', awayColor: '#ef0107',
       status: "63'", live: true, score: [1, 0],
-      odds: ['1.45', '3.90', '6.25'],
+      odds: ['1.55', '3.80', '5.40'],
     },
     {
-      league: 'Girabola',
-      home: 'Sagrada Esperança', away: 'Interclube',
-      homeTag: 'SAG', awayTag: 'INT', homeColor: '#1f8a4c', awayColor: '#1d4ed8',
-      status: 'Hoje 18:00', live: false,
-      odds: ['2.05', '3.10', '3.45'],
+      league: 'La Liga',
+      home: 'Real Madrid', away: 'Barcelona',
+      homeTag: 'RMA', awayTag: 'BAR', homeColor: '#e8e8e8', awayColor: '#a50044',
+      status: 'Hoje 20:00', live: false,
+      odds: ['2.25', '3.60', '2.90'],
     },
     {
       league: 'Liga dos Campeões',
-      home: 'Benfica', away: 'Real Madrid',
-      homeTag: 'SLB', awayTag: 'RMA', homeColor: '#e30613', awayColor: '#e8e8e8',
+      home: 'Bayern Munique', away: 'Liverpool',
+      homeTag: 'BAY', awayTag: 'LIV', homeColor: '#dc052d', awayColor: '#c8102e',
       status: 'Amanhã 20:00', live: false,
-      odds: ['3.60', '3.75', '1.95'],
+      odds: ['2.10', '3.70', '3.20'],
     },
     {
-      league: 'Premier League',
-      home: 'Arsenal', away: 'Liverpool',
-      homeTag: 'ARS', awayTag: 'LIV', homeColor: '#ef0107', awayColor: '#c8102e',
-      status: 'Sáb 17:30', live: false,
-      odds: ['2.30', '3.40', '2.95'],
+      league: 'Ligue 1',
+      home: 'PSG', away: 'Marseille',
+      homeTag: 'PSG', awayTag: 'OM', homeColor: '#004170', awayColor: '#2faee0',
+      status: 'Dom 19:45', live: false,
+      odds: ['1.50', '4.40', '6.00'],
+    },
+    {
+      league: 'Girabola',
+      home: 'Petro de Luanda', away: '1º de Agosto',
+      homeTag: 'PET', awayTag: 'AGO', homeColor: '#f4c20d', awayColor: '#d62828',
+      status: 'Sáb 16:00', live: false,
+      odds: ['1.95', '3.10', '3.80'],
     },
   ];
 
   protected readonly ticker = [
-    'Petro de Luanda 1–0 1º de Agosto · 63\'',
-    'Wiliete × Kabuscorp · 1 2.40 · X 3.05 · 2 2.85',
+    'Premier League · Man. City 1–0 Arsenal · 63\'',
+    'La Liga · Real Madrid × Barcelona · 1 2.25 · X 3.60 · 2 2.90',
     'Aviator · último voo x 8.32',
-    'Benfica × Real Madrid · 1 3.60 · X 3.75 · 2 1.95',
-    'NBA · Lakers × Celtics · 1.88 / 1.94',
-    'Arsenal × Liverpool · 1 2.30 · X 3.40 · 2 2.95',
+    'Champions · Bayern × Liverpool · 1 2.10 · X 3.70 · 2 3.20',
+    'Ligue 1 · PSG × Marseille · 1 1.50 · X 4.40 · 2 6.00',
+    'Serie A · Inter × Juventus · 1 2.05 · X 3.30 · 2 3.60',
+    'Premier League · Chelsea × Man. United · 1 1.95 · X 3.50 · 2 3.75',
+    'Girabola · Petro × 1º de Agosto · 1 1.95 · X 3.10 · 2 3.80',
     'Casino ao vivo · Roleta Europeia · 24h',
   ];
 
+  /** Ligas em destaque (secção própria, todas levam ao registo). */
+  protected readonly leagues = [
+    { name: 'Premier League', country: 'Inglaterra' },
+    { name: 'La Liga', country: 'Espanha' },
+    { name: 'Liga dos Campeões', country: 'Europa' },
+    { name: 'Ligue 1', country: 'França' },
+    { name: 'Serie A', country: 'Itália' },
+    { name: 'Bundesliga', country: 'Alemanha' },
+    { name: 'Liga Portugal', country: 'Portugal' },
+    { name: 'Girabola', country: 'Angola' },
+  ];
+
   protected readonly steps: { title: string; text: string }[] = [
-    { title: 'Abre o registo', text: 'Toca em «Criar conta». Abres o formulário oficial da Elephant Bet, já com o meu código de parceiro.' },
-    { title: 'Preenche os dados', text: 'Número de telemóvel angolano (+244), palavra-passe e dados pessoais. Menos de 2 minutos.' },
+    { title: 'Abre o registo', text: 'Toca em «Criar conta». Preenche o formulário oficial da Elephant Bet, já com o código de parceiro que te habilita a ganhar bónus de primeiro depósito.' },
+    { title: 'Completa os dados',text: 'Número de telemóvel angolano (+244), palavra-passe e dados pessoais. Menos de 2 minutos.' },
     { title: 'Verifica e deposita', text: 'Confirma a conta, faz o primeiro depósito em Kwanzas e escolhe o teu primeiro jogo.' },
   ];
 

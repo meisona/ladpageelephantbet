@@ -11,7 +11,7 @@ export const SITE_CONFIG = {
   promoCode: '',
 
   /** Domínio final onde a landing page vai ficar publicada (sem barra no fim). */
-  siteUrl: 'https://ladpageelephantbet.pages.dev',
+  siteUrl: 'https://landingelephant.pages.dev',
 
   siteName: 'Aposta Angola – Guia Elephant Bet',
 
